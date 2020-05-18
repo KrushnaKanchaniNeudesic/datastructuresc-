@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace LinkedList
 {
@@ -6,7 +7,23 @@ namespace LinkedList
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            LinkedList<int> linked = new LinkedList<int>();
+            for (int i = 1; i <= 5; i++)
+            {
+                linked.Add(i);
+            }
+
+            linked.AddLast(6);
+
+            foreach (var item in linked)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.ReadKey();
+
+            
+
         }
     }
 }
